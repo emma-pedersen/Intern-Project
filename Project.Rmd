@@ -9,11 +9,11 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# **Temporary titel**
+# Temporary titel
 
 **Integration of climate in economic decision making processes?**
 
-# **Preliminary project description**
+# Preliminary project description
 
 In this project I seek to investigate how to strengthen the integration of climate into economic decision making processes. In the analysis, I want to compare lifetime expenditures for climate-positive and climate-negative political measures, respectively. I wish to include a damage function with the purpose of include climate change in the comparison. The results of the analysis will be used to discuss whether there is a divergence between policies to reduce GHG emissions and the economic growth: do political measures which benefit the climate really affect the economic growth negatively? Finally, I wish to make a discussion or perspectivation to see whether the results can be applied to a municipal level in order to make a distinct connection to my internship.
 
