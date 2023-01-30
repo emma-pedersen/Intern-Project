@@ -1,0 +1,23 @@
+---
+output:
+  pdf_document
+---
+
+## Introduction
+
+Climate change is one of the most pressing issues of our time. The average global temperature has been increasing at an alarming rate, with the past decade continuously breaking several temperature records at the global, regional, and local level. It is evident that the impacts of climate change have been significant and wide-ranging, with melting ice caps and glaciers causing rise in sea levels, as well as more extreme weather events affecting the biodiversity and ecosystem resulting in a rapid extinction of species. In addition, climate change is a major concern for economies on a global, regional, and local level, as it can affect nearly every sector of the economy and trade, leading to significant economic losses ([@eucom]).
+
+The world has just concluded the hottest decade on record during which the title for the hottest year was beaten eight times. People, planet and prosperity are vulnerable to climate change, so we need to prevent the un-adaptable and adapt 
+
+The severeness of climate change has consistently been supported by the Intergovernmental Panel on Climate Change (IPCC). The organization's Fifth Assessment Report, released in 2014, found that it is extremely likely (95-100% probability) that human activities, primarily the burning of fossil fuels, are the dominant cause of observed warming since the mid-20th century. Their Special Report on Global Warming of $1.5^\circ$C, published in 2018, found that if the warming continues at the current rate, it will have severe and irreversible impacts on human and natural systems around the world. The report also finds that limiting warming to $1.5^\circ$C would require rapid and far-reaching transitions in energy, land, urban and infrastructure, and industrial systems.
+\bigskip
+
+\noindent Consequently, in 2015 the United Nations adopted both the Sustainable Development Goals (SDGs) and the Paris Agreement with the participation of all the member nations.
+
+The SDGs were adopted as part of the 2030 Agenda for Sustainable Development and consist of 17 global goals whith each goal accompanied by specific targets and indicators to measure progress, with the aim of ensuring that no one is left behind in the pursuit of sustainable development. The 17 SDGs are very broad, covering both social, economic and ecological issues.
+
+<!-- Insert Ban Ki-Moon quote about holistic approach -->
+
+A few months after the ... of the SDGs, The Paris Agreement was adopted under the United Nations Framework Convention on Climate Change (UNFCCC) in December 2015 with the purpose of limiting global warming to well below $2^\circ$C above pre-industrial levels by reducing greenhouse gas emissions. It is a legally binding agreement and was seen as a significant step forward in addressing the issue of climate change on a global scale.
+
+The SDGs and the Paris Agreement both provide a framework for action, but do not provide a specific toolbox for achieving the goals and targets. Therefore, it is up to the governments of each country to develop and implement national plans and policies that align with the goals and targets, and to allocate the necessary resources. It is also up to the individual countries to regularly report on their contribution both in their own country and through global efforts. Governments, institutions and academia have worked on adapting the goals, targets and indicators of he frameworks into a tangible action-oriented agenda. Due to the global and holistic perspective of both the SDGs and the Paris Agreement, the task to develop and implement the appropriate tools has been challenging. In particular on the level of local governance, there still is a need for knowledge about translating indicators and goals into tangible tools for local sustainable development.

@@ -1,0 +1,369 @@
+---
+title: ''
+output:
+  pdf_document:
+    includes:
+      in_header: preamble.tex
+      before_body:
+        - front-page.tex
+        - titlepage.tex
+    fig_caption: true
+    number_sections: true
+    keep_tex: true
+    toc: yes
+    toc_depth: 3
+geometry: "inner=28mm, outer=41mm"
+bibliography: refs.bib
+indent: true
+editor_options: 
+  markdown: 
+    wrap: sentence
+---
+
+```{r setup, include=FALSE}
+rm(list = ls())
+
+sapply(c("kableExtra", "knitr", "readxl", "tidyverse", "tufte", "wordcountaddin"), 
+       require, character.only = TRUE)
+
+source("Functions.R")
+
+opts_chunk$set(echo = F,
+               message = F, 
+               cache = T,
+               warning = F,
+               fig.pos = "H",
+               comment = NA,
+               null_prefix = TRUE
+               )
+
+options(digits = 3)
+```
+\newpage
+
+# Introduction
+
+```{r, child=c('Sections/1-1-Introduction.Rmd')}
+```
+```{r, child=c('Sections/1-1-1-DanishMunicipalities.Rmd')}
+```
+
+## The case of Aalborg Municipality
+
+The City of Aalborg in Denmark has been a pioneer in implementing sustainability policies, specifically in the field of environmental politics.
+This project will use Aalborg Municipality as a case study to examine the political dimensions of environmental issues and the implementation of sustainability policies.
+We will explore the ways in which the municipality has framed environmental issues, the actors involved in decision-making and the policy and legislative responses at the local level.
+Additionally, this project will examine the municipality's implementation of climate budgeting as a framework for decision-making and allocation of resources.
+The goal of this project is to gain a deeper understanding of the political dynamics that shape Aalborg's relationship with the natural environment and the ways in which the municipality works to protect it, with a specific focus on the role of climate budgeting in achieving sustainable change.
+
+## Problem Statement
+
+The problem statement is: How can a municipality effectively integrate climate change considerations into its economic decision-making in order to achieve sustainable development and align with the goals of the Paris Agreement?
+
+Climate change poses significant challenges to sustainable development, with the potential to exacerbate existing economic, social, and environmental issues.
+As municipalities are major centers of population and economic activity, it is crucial that they integrate climate change considerations into their economic decision-making in order to address these challenges and promote sustainable development.
+However, this is a complex task that requires a holistic and integrated approach.
+The current methods of economic decision-making in municipalities often do not sufficiently consider the potential long-term impacts of climate change and may not align with the goals of the Paris Agreement.
+This research aims to identify effective ways for municipalities to integrate climate change considerations into their economic decision-making in order to achieve sustainable development and align with the goals of the Paris Agreement.
+
+## Motivation
+
+In this project I seek to investigate how to strengthen the integration of climate into economic decision making processes.
+In the analysis, I want to compare lifetime expenditures for climate-positive and climate-negative political measures, respectively.
+I wish to include a damage function with the purpose of include climate change in the comparison.
+The results of the analysis will be used to discuss whether there is a divergence between policies to reduce GHG emissions and the economic growth: do political measures which benefit the climate really affect the economic growth negatively?
+Finally, I wish to make a discussion or perspectivation to see whether the results can be applied to a municipal level in order to make a distinct connection to my internship.
+
+## Delimitation
+
+## Structure of the paper
+
+# Theory
+
+## Environmental Economics
+
+Environmental economics is a field of study that examines the relationship between the economy and the environment.
+It uses economic tools and principles to understand how individuals, businesses, and governments make decisions that affect the environment, and how these decisions, in turn, affect economic activity.
+It also looks into the ways to design policies and regulations that promote sustainable development and environmental protection.
+
+Environmental economists study a wide range of topics, including the valuation of natural resources and ecosystem services, the design of market-based mechanisms to address environmental problems, the impacts of climate change, and the trade-offs between economic growth and environmental protection.
+They also examine the distributional effects of environmental policies and how they affect different groups of people.
+
+Some of the key concepts used in environmental economics include:
+
+-   Externalities: These are the costs or benefits of economic activities that are not reflected in market prices, such as the negative impacts of pollution on human health and the environment
+
+-   Sustainability: The ability to meet the needs of the present without compromising the ability of future generations to meet their own needs
+
+-   Environmental Kuznets curve: The idea that as economies develop, environmental degradation initially increases but eventually reaches a turning point after which it begins to decrease.
+
+-   Benefit-cost analysis: A way to evaluate the economic efficiency of a policy or project by comparing the costs and benefits of different alternatives.
+
+In summary, Environmental economics is a field of study that uses economic tools and principles to understand how individuals, businesses, and governments make decisions that affect the environment and how these decisions, in turn, affect economic activity.
+It also looks into ways to design policies and regulations that promote sustainable development and environmental protection.
+
+## Input-output Models
+
+Environmental input-output (EIO) models are a type of economic model that is used to analyze the environmental impacts of economic activity.
+They are based on the traditional input-output (IO) model, which is used to analyze the inter-industry relationships of an economy.
+EIO models extend the traditional IO models by adding environmental data, such as emissions of greenhouse gases and other pollutants, to the analysis.
+
+EIO models estimate the amount of emissions and other environmental impacts associated with the production of goods and services in an economy.
+This is done by analyzing the inputs, such as materials and energy, used in the production process and the outputs, such as the final goods and services produced.
+The model also estimates the indirect environmental impacts associated with the supply chain of the goods and services.
+
+EIO models can be used to estimate the environmental impacts of different economic activities and policies, such as changes in consumption patterns, technological change, and shifts in production location.
+They can also be used to identify key sectors and activities that have the greatest environmental impact, and to explore the trade-offs between economic growth and environmental protection.
+
+In summary, Environmental Input-Output (EIO) models are economic models that are used to analyze the environmental impacts of economic activity by adding environmental data to the traditional Input-Output models.
+It can be used to estimate the environmental impacts of different economic activities and policies, identify key sectors and activities that have the greatest environmental impact, and explore the trade-offs between economic growth and environmental protection.
+
+## Damage Functions
+
+A damage function is a mathematical relationship used in environmental economics and climate change economics to estimate the economic costs of climate change.
+The function describes the relationship between changes in temperature or other climate variables, such as sea level rise, and the resulting economic costs.
+It is used to estimate the costs of climate change in terms of lost GDP, damages to infrastructure, increased healthcare costs, and other impacts.
+
+Damage functions are typically used in Integrated Assessment Models (IAMs) which are a type of computational model used to analyze the economic and environmental impacts of climate change.
+The IAMs use different scenarios of greenhouse gas emissions and climate change to estimate the future costs of climate change.
+The damage function is an important component of these models as it provides the relationship between changes in temperature and the resulting economic costs.
+
+Damage functions are based on various assumptions regarding the relationship between temperature and economic costs, which can vary depending on the model and the data used.
+For example, some damage functions assume that the costs of climate change increase linearly with temperature, while others assume that the costs increase at an increasing rate as temperatures rise.
+
+Damage functions are a key tool used in the economic analysis of climate change, they are used to estimate the costs of different policy scenarios such as mitigation and adaptation.
+However, it is important to note that damage functions are based on assumptions and estimates, and there is still much uncertainty about the relationship between temperature and economic costs, which is subject to ongoing research and debate.
+
+## Climate budgeting
+
+-   What is the difference between carbon budgets and climate budgets?
+
+    Carbon budgets and climate budgets are related but different concepts.
+
+    Carbon budgets refer to the total amount of carbon dioxide (CO2) that can be emitted into the atmosphere over a certain period of time, in order to limit global warming to a specific temperature increase.
+    The Intergovernmental Panel on Climate Change (IPCC) has recommended that in order to limit global warming to well below 2 degrees Celsius above pre-industrial levels, the remaining "carbon budget" is around 1000 GtCO2.
+
+    Climate budgets, on the other hand, are a framework for decision-making and allocation of resources that uses quantitative limits on greenhouse gas emissions to guide actions at various levels, such as at national or sub-national level.
+    Climate budgets are based on the concept of carbon budgets but they also consider other greenhouse gases besides CO2 and set emissions limits for specific sectors and activities.
+    Climate budgeting is used to align policies and actions with the goals of the Paris Agreement, which is to limit global warming to well below 2 degrees Celsius above pre-industrial levels, and pursue efforts to limit the temperature increase to 1.5 degrees Celsius.
+
+    In summary, carbon budgets refer to the total amount of CO2 that can be emitted to stay within a certain temperature increase, while climate budgets are a framework that uses quantitative limits on greenhouse gas emissions to guide decision-making and allocation of resources at various levels, considering different sectors and activities.
+
+-   What is a city carbon budget?
+
+    A city carbon budget is a specific type of carbon budget that applies to the emissions produced by a city or municipality.
+    It sets a limit on the total amount of carbon dioxide (CO2) that can be emitted by the city over a certain period of time, in order to align with the goals of the Paris Agreement to limit global warming to well below 2 degrees Celsius above pre-industrial levels.
+
+    A city carbon budget is developed by taking into account the city's current and projected emissions, as well as the city's land use and transportation patterns, energy use, and other relevant factors.
+    It also considers the city's population and economic growth projections, as well as the availability of low-carbon technologies and other mitigation options.
+
+    A city carbon budget is typically used as a basis for developing a climate action plan, which outlines specific actions and policies to reduce emissions, such as increasing renewable energy use, promoting energy efficiency, and encouraging sustainable transportation.
+    It also helps to guide decision-making and resource allocation, and it can be used to monitor and report on progress in reducing emissions.
+
+    It is also worth mentioning that a city carbon budget is often developed as part of a broader climate budget, which considers not only CO2 but also other greenhouse gases and sets emissions limits for specific sectors and activities.
+
+    In summary, a city carbon budget is a quantified limit on the amount of carbon dioxide (CO2) that can be emitted by a city over a certain period of time, to align with the goals of the Paris Agreement, and it serves as a basis for developing a climate action plan, guide decision-making and resource allocation, and monitor and report on progress in reducing emissions.
+
+-   How can local governments use a climate budget?
+
+    Local governments can use a climate budget in several ways to drive sustainable change and align with the goals of the Paris Agreement:
+
+    1.  Setting emissions reduction targets: A climate budget can be used to set emissions reduction targets for the city or municipality, which can be used to guide policy and program development, as well as resource allocation.
+
+    2.  Developing a climate action plan: A climate budget can be used as a basis for developing a comprehensive climate action plan, which outlines specific actions and policies to reduce emissions, such as increasing renewable energy use, promoting energy efficiency, and encouraging sustainable transportation.
+
+    3.  Allocating resources: A climate budget can be used to guide decision-making and resource allocation across different sectors and activities, such as transportation, buildings, and energy production.
+
+    4.  Monitoring and reporting: A climate budget can be used to monitor and report on progress in reducing emissions and implementing the climate action plan, providing transparency and accountability for the city's efforts.
+
+    5.  Engaging stakeholders: A climate budget can be used to engage a wide range of stakeholders, including local communities, businesses, and other organizations, in the development and implementation of the climate action plan.
+
+    6.  Leveraging finance: A climate budget can be used to access to various financial resources, such as green bonds, carbon markets, and grants, to finance the implementation of the climate action plan.
+
+    7.  Adaptation: A climate budget can also be used to plan and implement adaptation measures, such as protecting against sea level rise, heat waves and more frequent extreme weather events.
+
+    In summary, Local governments can use a climate budget as a framework to set emissions reduction targets, develop a climate action plan, guide decision-making and resource allocation, monitor and report progress, engage stakeholders, leverage finance and plan for adaptation.
+
+-   What is the difference between a climate budget and climate budget tagging?
+
+    A climate budget and climate budget tagging are related but different concepts.
+
+    A climate budget is a framework for decision-making and allocation of resources that uses quantitative limits on greenhouse gas emissions to guide actions at various levels, such as at national or sub-national level.
+    Climate budgets are based on the concept of carbon budgets but they also consider other greenhouse gases besides CO2 and set emissions limits for specific sectors and activities.
+    Climate budgeting is used to align policies and actions with the goals of the Paris Agreement, which is to limit global warming to well below 2 degrees Celsius above pre-industrial levels, and pursue efforts to limit the temperature increase to 1.5 degrees Celsius.
+
+    Climate budget tagging, on the other hand, is a method of tracking and reporting the emissions associated with specific activities or projects.
+    It allows for the assignment of a specific portion of the climate budget to different sectors, activities or projects, such as transportation, buildings, and energy production.
+    This helps to ensure that the emissions associated with specific activities or projects are kept within the limits of the climate budget.
+
+    In summary, a climate budget is a framework that uses quantitative limits on greenhouse gas emissions to guide decision-making and allocation of resources, while climate budget tagging is a method of tracking and reporting the emissions associated with specific activities or projects, to ensure that they stay within the limits of the climate budget.
+
+-   How can we assure that the actions of the climate action plan are integrated in the climate budget?
+
+    There are several ways to assure that the actions of the climate action plan are integrated into the climate budget:
+
+    1.  Align the climate action plan with the climate budget: The climate action plan should be developed with the overall emissions reduction targets established by the climate budget in mind, and the specific actions and policies outlined in the climate action plan should be designed to achieve these targets.
+
+    2.  Assign specific emissions reduction targets to specific actions: Specific emissions reduction targets should be assigned to specific actions and policies outlined in the climate action plan, and these targets should be aligned with the overall emissions reduction targets established by the climate budget.
+
+    3.  Regularly review and update the climate action plan: The climate action plan should be reviewed and updated regularly in order to ensure that it remains aligned with the climate budget and is on track to achieve the emissions reduction targets.
+
+    4.  Monitor and report progress: Regular monitoring and reporting of progress in implementing the climate action plan and achieving the emissions reduction targets should be carried out, and the results should be used to adjust the climate action plan and climate budget as necessary.
+
+    5.  Engage stakeholders: Stakeholders such as local communities, businesses, and other organizations should be engaged in the development, implementation, and review of the climate action plan and climate budget
+
+What if the climate action plan is the overall framework?
+
+f the climate action plan is the overall framework, it can be used to guide the development and implementation of the climate budget.
+The climate action plan should outline specific actions and policies to reduce emissions and adapt to the impacts of climate change, and it should also include quantitative emissions reduction targets for specific sectors and activities.
+These targets can then be used as the basis for the climate budget, which can be used to guide decision-making and resource allocation across different sectors and activities.
+
+Additionally, the climate action plan should be reviewed and updated regularly to ensure that it remains aligned with the climate budget and is on track to achieve the emissions reduction targets.
+Regular monitoring and reporting of progress in implementing the climate action plan and achieving the emissions reduction targets should be carried out, and the results should be used to adjust the climate action plan and climate budget as necessary.
+
+By following this approach, the climate action plan serves as the overall framework for addressing climate change and the climate budget serves as a tool for implementing the plan and achieving the emissions reduction targets.\
+
+## Common Goods Matrix
+
+The Common Goods Matrix is a tool used in environmental and natural resource management to help identify and classify different types of resources or ecological systems, and the management challenges they pose.
+It is based on the idea that different resources or systems can be classified into four different categories: common-pool resources, open-access resources, private goods, and public goods.
+
+The matrix is organized into four quadrants, each representing one of the four categories of resources.
+The quadrants are:
+
+1.  Common-Pool Resources: These are resources that are both rivalrous and excludable, such as a fishery or a forest.
+
+2.  Open-Access Resources: These are resources that are non-excludable but rivalrous, such as the atmosphere or the oceans.
+
+3.  Private Goods: These are resources that are both excludable and non-rivalrous, such as a patented invention.
+
+4.  Public Goods: These are resources that are both non-excludable and non-rivalrous, such as knowledge or a lighthouse.
+
+The Common Goods Matrix can be used to identify the type of resource and the management challenges they pose.
+For example, common-pool resources require collective action and governance to prevent overuse, while open-access resources require regulation and management to prevent degradation.
+Public goods can be managed through public funding or other forms of support, while private goods can be managed through market mechanisms.
+
+In summary, the Common Goods Matrix is a tool used to identify and classify different types of resources or ecological systems, and the management challenges they pose, based on the categories of resources: common-pool resources, open-access resources, private goods, and public goods.
+It can be used to identify the type of resource and the management challenges they pose, and help to guide the selection and implementation of appropriate management strategies and policies for each type of resource.
+For example, common-pool resources may require collective action and governance to prevent overuse, while open-access resources may require regulation and management to prevent degradation.
+Public goods can be managed through public funding or other forms of support, while private goods can be managed through market mechanisms.
+The Common Goods Matrix is also useful for identifying potential trade-offs and synergies among different resources, and for communicating complex information about resource management to different stakeholders.
+
+The Common Goods Matrix can be used in conjunction with a climate budget to help identify and classify the different types of resources that are affected by climate change and the management challenges they pose.
+Climate change affects a wide range of resources, including natural resources such as water, forests, and biodiversity, as well as human-made resources such as infrastructure and buildings.
+By using the Common Goods Matrix, it is possible to identify the different types of resources that are affected by climate change and the management challenges they pose, and then align the climate budget accordingly.
+
+For example, climate change can affect common-pool resources such as water resources and fisheries, which may require collective action and governance to prevent overuse or degradation.
+Climate change can also affect open-access resources such as the atmosphere, which may require regulation and management to prevent further degradation.
+Climate change can also affect private goods such as buildings and infrastructure, which may require market mechanisms for adaptation and resilience.
+Climate change can also affect public goods such as knowledge and research, which may require public funding or other forms of support.
+
+In summary, the Common Goods Matrix can be used in conjunction with a climate budget to help identify and classify the different types of resources that are affected by climate change and the management challenges they pose.
+This can help to align the climate budget with the appropriate management strategies and policies for each type of resource, and to identify potential trade-offs and synergies among different resources.
+
+\
+
+<!-- # Method -->
+
+# Analysis
+
+I can give you an example of how the Common Goods Matrix could be used to classify and analyze the resources related to one of their budget proposals:
+
+Let's say Aalborg Municipality's budget proposal includes a plan to improve the energy efficiency of public buildings.
+The Common Goods Matrix could be used to classify and analyze the resources related to this proposal as follows:
+
+1.  Common-Pool Resources: Energy resources used in the public buildings, such as electricity and natural gas.
+    These resources are rivalrous and excludable, and the budget proposal may include measures to reduce consumption and manage the use of these resources.
+
+2.  Open-Access Resources: Climate, the budget proposal may include measures to reduce emissions and mitigate the impacts of climate change on the buildings.
+
+3.  Private Goods: Buildings and infrastructure, the budget proposal may include measures to improve the energy efficiency of these private goods, such as upgrading insulation and installing more efficient heating systems.
+
+4.  Public Goods: Knowledge, the budget proposal may include measures to share knowledge and information about energy efficiency and sustainable building practices, such as through training programs or public awareness campaigns.
+
+This is just one example of how the Common Goods Matrix can be used to classify and analyze the resources related to a budget proposal, and how it can be used to align the budget with appropriate management strategies and policies for each type of resource.
+
+-   Make a comparison of two budget proposals on a new school
+
+    1.  Proposal 1: The first budget proposal focuses primarily on energy efficiency and cost savings.
+        The budget includes funds for the installation of energy-efficient systems, such as LED lighting and smart controls, and for the implementation of energy management strategies, such as monitoring and reporting energy usage.
+        Additionally, the budget includes funds for the purchase of energy-efficient equipment and green cleaning products.
+
+    2.  Proposal 2: The second budget proposal focuses on sustainability and environmental protection.
+        The budget includes funds for the use of sustainable building materials, such as low-emitting insulation and flooring materials, and for the integration of renewable energy sources, such as solar panels.
+        It also includes funds for the promotion of sustainable transportation options, such as biking and walking, and for the development of infrastructure, such as bike racks and sidewalks.
+        The budget also includes funds for the development and implementation of educational programs and awareness campaigns that promote sustainable practices and behaviors, such as recycling and energy conservation.
+
+    The first proposal focuses mainly on cost savings and energy efficiency, while the second proposal also focuses on sustainability and environmental protection.
+    The first proposal may be more cost-effective in the short-term, but the second proposal may provide long-term benefits in terms of reducing emissions and promoting sustainable development.
+    Both proposals have their own advantages and disadvantages, and the best choice will depend on the specific context and goals of the municipality and school district.\
+
+    It's difficult to say which of the two proposals would give the largest emissions reduction without more information on the specific details of the proposals and the current emissions levels of the school.
+    However, generally speaking, the second proposal's focus on sustainability and environmental protection may provide a larger reduction in emissions than the first proposal, which focuses mainly on energy efficiency and cost savings.
+    The second proposal includes strategies such as the use of sustainable building materials, integration of renewable energy sources, promotion of sustainable transportation options and education and awareness campaigns to promote sustainable practices that are likely to reduce emissions.
+    On the other hand, the first proposal may lead to some reduction in emissions through energy efficiency measures, however, it may not address other sources of emissions such as transportation.
+
+# Discussion
+
+## Brugbarhed
+
+-   Er det realistisk at anvende i en kommunal kontekst?
+
+## Alternatives
+
+## Limitations/Shortfalls
+
+# Conclusion
+
+# Appendix
+
+<!--- Noter fra Sebastian
+
+1.  Compare the specific projects that are seeking funding in Aalborg
+
+    -   A table with different dimensions describing the environmental impact
+
+        -   Use in the municipality to measure how good each project scores compared to determined (world?) benchmarks
+
+    -    Using the Common Good Matrix: <https://www.ecogood.org/apply-ecg/common-good-matrix/>
+
+        -   Maybe some of the dimensions of this matrix can be useful
+
+        -   Used by some municipalities around the world
+
+        -   Nourish the analysis with the lessons learned by the municipalities that have already used something along these lines
+
+2.  Including damage functions to all the projects that the municipality is working with (or could eventually be)
+
+    -   To do this properly you would need to know the carbon intensity (direct and indirect) of each project
+
+        -   Could be obtained by combining different sources of information
+
+    -   E.g. the municipality could require the projects to provide specific information about their carbon footprint as part of the application for funding process,
+
+        -   Also possible to use input-output analysis to see the "emissions
+            multiplier" of the industry to which the sector belongs. 
+
+3.  Build an indicator summarizing the information on positive environmental impacts and (negative) damages.
+
+    -   The indicator could rank the projects so that the municipality knows the ones with the higher positive impact. 
+
+4.  If nothing empirical, maybe illustrate it with the "Aalborg Kommune approach to climate change".
+
+    -   Even with no concrete data about the projects the municipality is working on, maybe you can still identify the policies or measures the local government takes to mitigate or adapt to climate change.
+
+        -   The theoretical analysis could be used to assess a real-world problem, allowing you to show how the theories can be used
+
+5.  Plan B could be to carry out a more qualitative analysis of the environmental approach of the public policy of the municipality. 
+
+6.  Use different theories addressing the problem of the links between the economy and the environment to critically analyze the public policy of the municipality, without necessarily having concrete quantitative information about specific projects.
+
+    -   E.g. assume that the Kommune
+        levies a carbon tax.
+
+        -   Even if you did not have too much information about that policy, you could still frame that policy into the theoretical background that supports it, and discuss the advantages and
+            weaknesses of that type of approach.
+
+        -   Despite not being entirely quantitative, the project would still be based on a real-world case and could eventually add to the discussion about public policy in the context of the green transition.
+
+--->
